@@ -3,14 +3,14 @@
  */
 
 /**
- * @author pablo
+ * @author PC
  *
  */
-public class Villian extends Player {
+public class Boss extends Player {
 
 	private int specialAT; // variable de ataque especial
 	
-		public Villian(int life, int armor, int str, int power, int specialAT) {
+		public Boss(int life, int armor, int str, int power, int specialAT) {
 		super(life, armor, str, power);
 			this.specialAT = specialAT;
 		}
