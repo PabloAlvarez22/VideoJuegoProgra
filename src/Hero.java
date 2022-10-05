@@ -58,9 +58,9 @@ public class Hero extends Player{
 	
 	// Métodos de ataque
 
-	public int PhysicalAttack() {
+	public int PhysicalAttack(int str) {
 		int randomAT = random.nextInt(3);
-		return getStr() * randomAT;
+		return str * randomAT;
 	}
 	
 	public int ItemSalud(int life, int heal) {
@@ -94,7 +94,16 @@ public class Hero extends Player{
 	
 	//Método para recibir daño
 	
-	public void Damage(int life) {
-		life -= life;
+	public int DamagePlayer(int life, int armor, int str, int power) {
+		
+		if (armor>0) {
+			armor = armor - str;
+			armor = armor - power;
+			return armor;
+		} else {
+			life = life - str;
+			life = life - power;
+			return life;
+		}
 	}
 }
