@@ -8,10 +8,10 @@
  */
 public class Hero extends Player{
 
-	private int heal;
+	private int heal; //variable de cura
 	
-	public Hero(int life, int heal) {
-		super(life);
+	public Hero(int life, int armor, int str, int power, int heal) {
+		super(life, armor, str, power);
 			this.heal = heal;
 	}
 

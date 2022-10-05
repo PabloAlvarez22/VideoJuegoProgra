@@ -15,7 +15,7 @@ public class Game {
 	/**
 	 * @param args
 	 */
-	public static void menu(String[] args) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int opcion = 0;
 		
@@ -26,15 +26,20 @@ public class Game {
 	            System.out.println("2. Cerrar Juego");
 	            opcion = entrada.nextInt();	
 	            
-	            if (opcion == 1) {
-	            	//32
-	            }
-	            else {
-	            	System.out.println("Número mal ingresado, vuelva a abrir el programa");
+	            switch(opcion) {
+	            case 1:
+	            	System.out.println("Prueba");
+	            	
+	            	
+	            	
+	            	opcion = 2;
 	            	break;
-	            }
-		
-	}
+	            case 2: 
+	            	break;
+	            case 3:
+	            	System.out.println("Número mal ingresado pruebe nuevamente");
+	            }		
+	        }
 
-}
+	}
 }	
