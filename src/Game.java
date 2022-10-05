@@ -16,11 +16,9 @@ public class Game {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Variables a utilizar
 		int player;
 		int vida;
-		int max = 3; 
-		int min = 1;
 		
 		int healthG = 100, armaduraG = 100;
 		int healthMag = 100, armaduraMag = 50;
@@ -37,19 +35,22 @@ public class Game {
 		boolean heros = true, villians = true;
 		int opcion = 0;
 
+		// Menú principal
+		
 	        while(opcion!=3){
 	    		
 	    	    System.out.println("BIENVENIDO AL JUEGO DEL SIGLO");
 	            System.out.println("¿QUIERES JUGAR?");
-	            System.out.println("1. Villanos comunes");
-	            System.out.println("2. Boss Final");
-	            System.out.println("3. Cerrar Juego");
+	            System.out.println("1. Iniciar juego");
+	            System.out.println("2. Cerrar Juego");
 	            opcion = entrada.nextInt();	
 	            
 	        	
 	            switch(opcion) {
 	            case 1:
 	            	System.out.println("Cargando...");
+	            	
+	            	//Las distintas clases
 	            	
 	            	Hero Guerrero = new Hero(100, 100, 10, 5, 10, 5, "Gerardo");
 	            	Hero Mago = new Hero(100, 50, 20, 5, 10, 5, "Gertrudis");
@@ -69,6 +70,8 @@ public class Game {
 	            	System.out.println("4. Asesino Jack (Personaje con poca resistencia, pero excelente ataque físico)");
 	            	System.out.println("5. Tanque Gibraltar (Personaje con vida y resistencia excelente, pero poco daño)");
 	            	player = entrada.nextInt();
+	            	
+	            	//Todos los jugadores disponibles y sus distintos ataques y derribos.
 	            	
 	            	if (player==1) {
             			System.out.println("Un monstruo se avecina");
@@ -415,12 +418,10 @@ public class Game {
 	            	System.out.println("¿Quieres seguir?");
 	            	opcion = 1;
 	            	break;
-	            case 2: 
-	            	break;
-	            case 3:
+	            case 2:
 	            	System.out.println("Cerrando...");
 	            	break;
-	            case 4:
+	            case 3:
 	            	System.out.println("Número mal ingresado pruebe nuevamente");
 	            	break;
 	            }		
